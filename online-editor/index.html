@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<b> 1.html</b>
+<form action="/cgi-bin/html_save.py" method="post">
+<textarea id="htmlcontent" name="htmlcontent" cols="100" rows="30">
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="1.css" />
+</head>
+
+<body>
+
+  <style1>  demo </style1>
+  write your code...
+
+</body>
+</html>
+</textarea>
+
+<br /><b>1.css</b><br />
+<textarea name="css1content" cols="100" rows="5">
+style1{
+  color: red;
+}
+
+</textarea>
+
+<br /><b>2.css</b><br />
+<textarea name="css2content" cols="100" rows="5">
+Type your text here...
+</textarea>
+
+<input type="submit" value="save file (1.html + 1.css + 2.css) " />
+
+<p><input name=button3 type=button value="show result" onclick=showResult()></p>
+<h3>Show result</h3>
+<script language=javascript>
+function showResult()
+{
+    var str1=document.getElementById("htmlcontent").value;
+    document.getElementById("result").innerHTML = str1
+}
+</script>
+<div id="result"></div>
+
+</form>
+
+</body>
+</html>
